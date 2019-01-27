@@ -1,0 +1,11 @@
+{% extends 'headerFooter.html' %}
+
+{% block content %}
+    <h1>Welcome</h1>
+    <p>Aenean id ante non quam placerat rutrum. In vel aliquam enim. Duis varius, erat id consectetur consequat, diam nulla posuere velit, sed imperdiet justo massa ut lacus. Duis vitae sapien sed lorem dignissim accumsan.</p>
+    {% for item in myList %}
+    <ul>
+      <li>{{item}}</li>
+    </ul>
+    {% endfor %}
+{% endblock %}

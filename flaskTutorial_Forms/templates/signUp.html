@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>please signUp, your record will not be saved to any database</h2>
+  <form  action="{{url_for('thankyou')}}">
+    <label for="first name">First name </label>
+    <input type="text" name="first" value="">
+    <label for="last name">Last name </label>
+    <input type="text" name="last" value="">
+    <input type="submit" value="Sign up">
+  </form>
+{% endblock %}

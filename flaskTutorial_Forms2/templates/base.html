@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css">
+    <title>Flask Forms</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Flask Forms Practice</h1>
+      <a href="{{url_for('signUp')}}"> SignUp </a> <span> | </span> <a href="{{url_for('index')}}"> Home </a>
+      {% block content %}
+
+      {% endblock %}
+    </div>
+  </body>
+</html>

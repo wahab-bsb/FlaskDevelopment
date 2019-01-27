@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css">
+    <title>Forms practice</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Form Practice</h1>
+      <a href="{{url_for('index')}}">Home</a> <span> | </span> <a href="{{url_for('signUp')}}">Signup</a>
+      <div class="jumbotron">
+        {% block content %}
+
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
