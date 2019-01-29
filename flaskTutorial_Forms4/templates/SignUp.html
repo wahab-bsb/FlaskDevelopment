@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="jumbotron">
+    <p>Please fill up the signup form. Your information will not be store in any database. </p>
+    <form method="post">
+      {{ form.hidden_tag() }}
+      {{ form.firstName.label }} {{ form.firstName }}
+      <br>
+      {{ form.lastName.label }} {{ form.lastName }}
+      <br>
+      {{ form.gender.label }} {{ form.gender }}
+      <br>
+      {{ form.location.label }} {{ form.location }}
+      <br>
+      {{ form.address.label }} {{ form.address }}
+      <br>
+      {{ form.agreeToTerms.label }} {{ form.agreeToTerms }}
+      <br>
+      {{ form.submit }}
+
+
+    </form>
+  </div>
+
+{% endblock %}
