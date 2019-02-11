@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container">
+
+
+    <div class="jumbotron">
+      <h2>Computer Sciences Department</h2>
+      <br>
+      {% for record in records:%}
+        {% if record.department_id == 1: %}
+          <li>ID: <b>{{record.employee_id}}</b></li>
+          <li>First name : <b>{{record.first_name}}</b></li>
+          <li>Last name : <b>{{record.last_name}}</b></li>
+          <li>DOB : <b>{{record.dob}}</b></li>
+          <li>CNIC : <b>{{record.cnic}}</b></li>
+
+          {% if record.qualification == 'bs': %}
+          <li>Qualification : <b>Bachelors</b></li>
+          {% elif record.qualification == 'ms': %}
+          <li>Qualification : <b>Masters</b></li>
+          {% elif record.qualification == 'phd': %}
+          <li>Qualification : <b>PHD</b></li>
+          {% endif %}
+          <span> ---------------------------- </span>
+          <br>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="jumbotron">
+      <h2>Electrical Engineering</h2>
+      <br>
+      {% for record in records:%}
+        {% if record.department_id == 2: %}
+          <li>ID: <b>{{record.employee_id}}</b></li>
+          <li>First name : <b>{{record.first_name}}</b></li>
+          <li>Last name : <b>{{record.last_name}}</b></li>
+          <li>DOB : <b>{{record.dob}}</b></li>
+          <li>CNIC : <b>{{record.cnic}}</b></li>
+
+          {% if record.qualification == 'bs': %}
+          <li>Qualification : <b>Bachelors</b></li>
+          {% elif record.qualification == 'ms': %}
+          <li>Qualification : <b>Masters</b></li>
+          {% elif record.qualification == 'phd': %}
+          <li>Qualification : <b>PHD</b></li>
+          {% endif %}
+          <span> ---------------------------- </span>
+          <br>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="jumbotron">
+      <h2>Environmental Sciences</h2>
+      <br>
+      {% for record in records:%}
+        {% if record.department_id == 3: %}
+          <li>ID: <b>{{record.employee_id}}</b></li>
+          <li>First name : <b>{{record.first_name}}</b></li>
+          <li>Last name : <b>{{record.last_name}}</b></li>
+          <li>DOB : <b>{{record.dob}}</b></li>
+          <li>CNIC : <b>{{record.cnic}}</b></li>
+
+          {% if record.qualification == 'bs': %}
+          <li>Qualification : <b>Bachelors</b></li>
+          {% elif record.qualification == 'ms': %}
+          <li>Qualification : <b>Masters</b></li>
+          {% elif record.qualification == 'phd': %}
+          <li>Qualification : <b>PHD</b></li>
+          {% endif %}
+          <span> ---------------------------- </span>
+          <br>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="jumbotron">
+      <h2>Mechanical Engineering</h2>
+      <br>
+      {% for record in records:%}
+        {% if record.department_id == 4: %}
+          <li>ID: <b>{{record.employee_id}}</b></li>
+          <li>First name : <b>{{record.first_name}}</b></li>
+          <li>Last name : <b>{{record.last_name}}</b></li>
+          <li>DOB : <b>{{record.dob}}</b></li>
+          <li>CNIC : <b>{{record.cnic}}</b></li>
+
+          {% if record.qualification == 'bs': %}
+          <li>Qualification : <b>Bachelors</b></li>
+          {% elif record.qualification == 'ms': %}
+          <li>Qualification : <b>Masters</b></li>
+          {% elif record.qualification == 'phd': %}
+          <li>Qualification : <b>PHD</b></li>
+          {% endif %}
+          <span> ---------------------------- </span>
+          <br>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="jumbotron">
+      <h2>Software Engineering</h2>
+      <br>
+      {% for record in records:%}
+        {% if record.department_id == 5: %}
+          <li>ID: <b>{{record.employee_id}}</b></li>
+          <li>First name : <b>{{record.first_name}}</b></li>
+          <li>Last name : <b>{{record.last_name}}</b></li>
+          <li>DOB : <b>{{record.dob}}</b></li>
+          <li>CNIC : <b>{{record.cnic}}</b></li>
+
+          {% if record.qualification == 'bs': %}
+          <li>Qualification : <b>Bachelors</b></li>
+          {% elif record.qualification == 'ms': %}
+          <li>Qualification : <b>Masters</b></li>
+          {% elif record.qualification == 'phd': %}
+          <li>Qualification : <b>PHD</b></li>
+          {% endif %}
+          <span> ---------------------------- </span>
+          <br>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+{% endblock %}

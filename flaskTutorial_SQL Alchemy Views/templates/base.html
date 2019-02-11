@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css">
+    <title>Employee Portal</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Employee Portal</h1>
+      <a href="{{ url_for('index') }}"> Home </a> <span> | </span>
+      <a href="{{url_for('ViewRecord')}}"> Search Employee Record</a> <span> | </span>
+      <a href="{{url_for('viewAllRecords')}}"> View All Employees </a> <span> | </span>
+      <a href="{{ url_for('addEmployee') }}"> Add New Employee </a> <span> | </span>
+      <a href="{{ url_for('update') }}"> Update Employee Record </a> <span> | </span>
+      <a href="#"> Delete Employee Record </a>
+
+      {% block content %}
+
+      {% endblock %}
+
+    </div>
+  </body>
+</html>

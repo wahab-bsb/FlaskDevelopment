@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="jumbotron">
+    <h2>Search Employee Data</h2>
+    <p>Please provide employee id to search. </p>
+
+    <form method="post">
+      {{form.hidden_tag()}}
+      {{form.employeeId.label}} {{form.employeeId }}
+      <br>
+      {{form.submit()}}
+    </form>
+
+  </div>
+{% endblock %}

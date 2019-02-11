@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron">
+  <p> Please fill out the following details</p>
+  <form method="POST">
+    {{ addForm.hidden_tag() }}
+
+    {{ addForm.first_name.label }} {{ addForm.first_name }}
+    <br>
+    {{ addForm.last_name.label }} {{ addForm.last_name }}
+    <br>
+    {{ addForm.dob.label }} {{ addForm.dob }}
+    <br>
+    {{ addForm.cnic.label }} {{ addForm.cnic }}
+    <br>
+    {{ addForm.qualification.label }} {{ addForm.qualification }}
+
+    {{ addForm.department.label }} {{ addForm.department }}
+    <br>
+    <br>
+    {{ addForm.submit }} <a href="{{url_for('index')}}"><button type="button" name="button">Back</button></a>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron">
+  <form method="post">
+    {{form.hidden_tag()}}
+    <p>Employee ID : <b>{{id}}</b></p>
+    {{form.first_name.label}} : {{form.first_name}}
+    <br>
+    {{form.last_name.label}} : {{form.last_name}}
+    <br>
+    {{form.dob.label}} : {{form.dob}}
+    <br>
+    {{form.cnic.label}} : {{form.cnic}}
+    <br>
+    {{form.qualification.label}}  {{form.qualification}}
+
+    {{form.department.label}} : {{form.department}}
+    <br>
+    <br>
+    {{form.updateSubmit}} <a href="{{ url_for('update') }}"><button type="button" name="back"> Back </button></a>
+  </form>
+</div>
+
+{% endblock %}

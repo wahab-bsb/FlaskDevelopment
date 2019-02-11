@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="jumbotron">
+    <p>Following are the details</p>
+    <ul>
+      <li>ID: <b>{{record.employee_id}}</b></li>
+      <li>First name : <b>{{record.first_name}}</b></li>
+      <li>Last name : <b>{{record.last_name}}</b></li>
+      <li>DOB : <b>{{record.dob}}</b></li>
+      <li>CNIC : <b>{{record.cnic}}</b></li>
+
+      {% if record.qualification == 'bs': %}
+      <li>Qualification : <b>Bachelors</b></li>
+      {% elif record.qualification == 'ms': %}
+      <li>Qualification : <b>Masters</b></li>
+      {% elif record.qualification == 'phd': %}
+      <li>Qualification : <b>PHD</b></li>
+      {% endif %}
+
+      <li>Department : <b>{{record.department.department_name}}</b></li>
+    </ul>
+    <a href="{{url_for('ViewRecord')}}"><button type="button" name="button">Back</button></a>
+  </div>
+{% endblock %}

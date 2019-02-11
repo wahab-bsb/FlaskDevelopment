@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="jumbotron">
+    <h2>Record Entered Successfully</h2>
+    <p>Following are the details</p>
+    <ul>
+      <li>ID: <b>{{session.id}}</b></li>
+      <li>First name : <b>{{session.first_name}}</b></li>
+      <li>Last name : <b>{{session.last_name}}</b></li>
+      <li>DOB : <b>{{session.dob}}</b></li>
+      <li>CNIC : <b>{{session.cnic}}</b></li>
+
+      {% if session.qualification == 'bs': %}
+      <li>Qualification : <b>Bachelors</b></li>
+      {% elif session.qualification == 'ms': %}
+      <li>Qualification : <b>Masters</b></li>
+      {% elif session.qualification == 'phd': %}
+      <li>Qualification : <b>PHD</b></li>
+      {% endif %}
+
+      {% if session.department == '1': %}
+        <li>Department : <b>Computer Science</b></li>
+      {% elif session.department == '2': %}
+        <li>Department : <b>Electrical Engineering</b></li>
+      {% elif session.department == '3': %}
+        <li>Department : <b>Environmental Sciences</b></li>
+      {% elif session.department == '4': %}
+        <li>Department : <b>Mechanical Engineering</b></li>
+      {% elif session.department == '5': %}
+        <li>Department : <b>Software Engineering</b></li>
+      {% endif %}
+      <br>
+      <br>
+      <a href="{{url_for('addEmployee')}}"><button type="button" name="button">Back</button></a>
+    </ul>
+
+  </div>
+{% endblock %}
